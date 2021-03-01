@@ -13,16 +13,12 @@ function connectToDatabase()
     $dsn = 'mysql:host=localhost;dbname=mr_cocktail';
     // Nom d'utilisateur pour se connecter
     $user = 'root';
-
     // Mot de passe pour se connecter
     //$password = 'root';     // Il y a un mot de passe avec MAMP
     $password = '';      // Pas de password avec XAMPP et WampServer
-
     // Connexion à la base de données en utilisant les paramètres indiqués au-dessus.
     $pdo = new PDO($dsn, $user, $password);
-
     // $pdo->exec('SET NAMES utf8');
     // Autre moyen d'indiquer à PDO/PHP que les données qui transitent sont encodées en UTF-8
-
     return $pdo;
 }
